@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="githubviewer">
+
+<head>
+  <script data-require="angular.js@1.4.7" data-semver="1.4.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+</head>
+
+<body ng-controller="MainController">
+  <div>
+    <div> {{error}} </div>
+    <form name="searchUser" ng-submit="search(username)">
+      <input type="search" required placeholder="username to find" ng-model="username" />
+      <input type="submit" value="Search" />
+    </form>
+</div>
+<div ng-include="'userdetails.html'" ng-show ="user"></div>
+</body>
+
+</html>
