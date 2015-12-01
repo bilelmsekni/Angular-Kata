@@ -1,0 +1,17 @@
+<h1>{{repoName}}</h1> {{error}}
+<div>Id: {{Id}}</div>
+<div>Full name: {{full_name}}</div>
+<div>Open Issues: {{issuesCount}}</div>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Gravatar</th>
+  </tr>
+  <tbody>
+    <tr ng-repeat="contributor in Contributors">
+      <td>{{contributor.login}}</td>
+      <td><img ng-src="{{contributor.avatar_url}}"/></td>
+    </tr>
+  </tbody>
+</table>
